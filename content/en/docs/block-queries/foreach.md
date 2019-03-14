@@ -44,15 +44,15 @@ This puts the element to loop over into the variable b. Without it, the foreach 
 
 {{< docs_repl >}}
 // get all bank nodes in coordinates
-(
+
   node[amenity=bank]
   (47.0678,15.4401658,47.069,15.4501658);
-  >;
-);
+  
+
 // foreach bank node, print out adjacent nodes
 foreach->.bank_set(
   node(around.bank_set:15)->.adjacent_set;
-  (.adjacent_set);
+  (.adjacent_set;);
+ 
   out meta;
-);
 {{< /docs_repl >}}
