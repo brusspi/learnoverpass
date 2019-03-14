@@ -26,11 +26,11 @@ It is also possible to specify several input sets:
 
 {{< docs_repl >}}
 // get area Alpe and Cividale
-(area[name="Cividale del Friuli"])->.Cividale;
-(area[name="Julijske Alpe"])->.Alpe;
+(area[name="Cividale del Friuli"];)->.Cividale;
+(area[name="Julijske Alpe"];)->.Alpe;
 
-(node[power=pole](area.Cividale))->.Cividale_nodes;
-(node[power=pole](area.Alpe))->.Alpe_nodes;
+(node[power=pole](area.Cividale);)->.Cividale_nodes;
+(node[power=pole](area.Alpe);)->.Alpe_nodes;
 
 // print out nodes that are present in both areas (intersection)
 node.Alpe_nodes.Cividale_nodes;
@@ -43,4 +43,5 @@ out skel qt;
 (relation[name="Julijske Alpe"];>;);
 out body;
 out skel qt;
+
 {{< /docs_repl >}}
